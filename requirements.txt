@@ -1,5 +1,5 @@
 flask
-gunicorn
 numpy
+gunicorn
 pickle4
 scikit-learn
