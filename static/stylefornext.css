@@ -1,0 +1,41 @@
+
+
+body {
+   
+    
+    
+    color: rgb(249, 245, 245);
+    width: fit-content;
+}
+label {
+    width: 200px;
+    display: inline-block;
+   
+}
+
+div.ebody{
+    background: transparent;
+   margin-top: 0.4 in;
+   margin-left: 4.5in;
+  
+   
+}
+legend{
+    margin-left:30%;
+}
+div.btn{
+    padding-left: 120px;
+}
+
+
+#vidmar{    
+    background-image: url("/static/neural.gif");
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
+}
