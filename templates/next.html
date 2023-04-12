@@ -17,11 +17,11 @@
                     
                     <label name="nam">Name:</label> <input type="text" name="nam" required placeholder="User name"><br><br>
                     <label name="age">Age:</label> <input type="number"name="age" required placeholder="Age"><br><br>
-                    <label name="st">Skin thickness:</label> <input type="number" name="st" required placeholder="Skin thickness"><br><br>
+                    <label name="st">Skin thickness:</label> <input type="number" name="st" required placeholder="Skin thickness in IDDM"><br><br>
                     <label name="pregnets">Number of pregnenecies:</label> <input type="number" name="pregnets" placeholder="No of pregncies" required><br><br>
-                    <label name="glucose">Glucose:</label> <input type="number" name="glucose" placeholder="Glucose" required><br><br>
-                    <label name="BP">Blood Pressure:</label> <input type="number" name="BP" placeholder="Blood Pressure" required><br><br>
-                    <label name="Insulin">Insulin:</label> <input type="number" name="Insulin"  placeholder="Insulin" required><br><br>
+                    <label name="glucose">Glucose:</label> <input type="number" name="glucose" placeholder="Glucose in mg/dl" required><br><br>
+                    <label name="BP">Blood Pressure:</label> <input type="number" name="BP" placeholder="Blood Pressure in mmHg" required><br><br>
+                    <label name="Insulin">Insulin:</label> <input type="number" name="Insulin"  placeholder="Insulin in ml" required><br><br>
                     <label name="Bmi">Bmi:</label> <input type="number" name="Bmi"  step="any" placeholder="Bmi" required><br><br>
                     <label name="Pedigree">Diabetes Pedigree Function:</label> <input type="number"  placeholder="Diabetic pedigree Function" step="any" name="Pedigree" required><br><br>
                     <div class="btn" >
@@ -34,7 +34,7 @@
                         <td>
                             {% if r==1 %}
                             <h2>Positive</h2>
-                            {% else %}
+                            {% elif r==0 %}
                             <h2>Negative</h2>
                             {% endif %}
                         </td>
