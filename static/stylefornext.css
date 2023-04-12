@@ -15,8 +15,9 @@ label {
 
 div.ebody{
     background: transparent;
-   margin-top: 0.4 in;
-   margin-left: 4.5in;
+    position: absolute;
+   margin-top: 8%;
+   margin-left: 35%;
   
    
 }
