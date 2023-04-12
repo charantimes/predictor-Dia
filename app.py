@@ -22,8 +22,19 @@ def next():
          st=float(request.form['st'])
          print(np.array([nap,glucose,BP,st,insu,bmi,pf,age]).reshape(1,-1))
          pred=model.predict(np.array([nap,glucose,BP,st,insu,bmi,pf,age]).reshape(1,-1))
-         return render_template('next.html',nal=name,r=pred)
+         return render_template('next.html',nal=name,r=pred,age=age)
     return render_template('next.html')
+@app.route('/diet',methods=['POST'])
+def diet():
+    if request.method=="POST":
+        age=float(request.form['Diet'])
+        if(age>0 and age<26):
+            return render_template('25.html')
+        elif(age>50):
+            return render_template('50.html')
+        else:
+            return render_template('30.html')
+
    
 
 if __name__=="__main__":

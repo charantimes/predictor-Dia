@@ -27,19 +27,28 @@
                     <div class="btn" >
                    <button name="button" class='btn btn-success' id="sub">Submit</button>
                    <button type="reset">Reset</button>
+                </form>
                     </div> 
                     <table>
                         <td>{{nal}}</td>
                         <td>Your test results are :</td>
                         <td>
                             {% if r==1 %}
-                            <h2>Positive</h2>
+                            <h3>Positive</h3>
                             {% elif r==0 %}
                             <h2>Negative</h2>
                             {% endif %}
                         </td>
+                        <td>
+                            {% if r==1 %}
+                                <form action="/diet" method="post">
+                                    <input type="hidden" name="Diet"  value="{{age}}">
+                                    <input type="submit" value="Diet-Plan" id="a1">
+                                </form>
+                            {% endif %}
+                        </td>
                     </table>
-                </form>
+                    
                </fieldset>
             </div>
     </section>
