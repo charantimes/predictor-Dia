@@ -13,9 +13,14 @@
         <div class="ebody" name="totalbody" id="entirebody">
             <fieldset>
                 <legend>DIABETIC ANALYZER</legend>
-                <form action="/next" method="post" name="entireform" id="entireform">
+                <form action="report.html" method="post" name="entireform" id="entireform">
                     
-                    <label name="nam">Name:</label> <input type="text" name="nam" required placeholder="User name"><br><br>
+                    <label name="nam">Name:</label> <input type="text" name="nam" required placeholder="Patient name"><br><br>
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender" class="form-control" required='True'>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br><br>
                     <label name="age">Age:</label> <input type="number"name="age" required placeholder="Age"><br><br>
                     <label name="st">Skin thickness:</label> <input type="number" name="st" required placeholder="Skin thickness in IDDM"><br><br>
                     <label name="pregnets">Number of pregnenecies:</label> <input type="number" name="pregnets" placeholder="No of pregncies" required><br><br>

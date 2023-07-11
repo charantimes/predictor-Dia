@@ -8,10 +8,14 @@ model=pickle.load(open('classi.pkl','rb'))
 @app.route('/')
 def home():
     return render_template('index.html')
-@app.route('/next',methods=['POST','GET'])
+@app.route('/next')
 def next():
+    return render_template('next.html')
+@app.route('/report.html',methods=['POST','GET'])
+def report():
     if request.method=='POST':
          name=request.form.get('nam')
+         gen=request.form.get('gen')
          nap=float(request.form['pregnets'])
          glucose=float(request.form['glucose'])
          BP=float(request.form['BP'])
@@ -22,7 +26,7 @@ def next():
          st=float(request.form['st'])
          print(np.array([nap,glucose,BP,st,insu,bmi,pf,age]).reshape(1,-1))
          pred=model.predict(np.array([nap,glucose,BP,st,insu,bmi,pf,age]).reshape(1,-1))
-         return render_template('next.html',nal=name,r=pred,age=age)
+         return render_template('report.html',name=name,r=pred,age=age,gen=gen,BP=BP,glu=glucose)
     return render_template('next.html')
 @app.route('/diet',methods=['POST'])
 def diet():

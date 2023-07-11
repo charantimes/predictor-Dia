@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+.main-form{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-right: 10%;
+}
